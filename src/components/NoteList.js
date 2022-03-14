@@ -7,7 +7,12 @@ class NoteList extends React.Component {
       <div className="listHeader">Latest notes</div>
       <div className="listContainer">
         {this.props.notes.map((note) =>
-          <NoteElement content={note.content} date={note.date} />
+          <NoteElement 
+            content={note.content}
+            date={note.date} 
+            key={note.date}
+            onDelete={this.props.onDelete.bind(this, note)} 
+          />
         )}
       </div>
       </>

@@ -6,9 +6,9 @@ class NoteElement extends React.Component {
       <div className="noteElement">
         <div className="noteWrapper">
           <div className="noteContent">{this.props.content}</div>
-          <div className="noteDate">{this.props.date}</div>
+          <div className="noteDate">{(new Date(this.props.date)).toLocaleDateString()}</div>
         </div>
-        <button className="btnDel">Delete note</button>
+        <button className="btnDel" onClick={this.props.onDelete}>Delete note</button>
       </div>
     )
   }
