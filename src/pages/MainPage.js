@@ -1,6 +1,6 @@
-import NoteEditor from './components/NoteEditor'
-import NoteList from './components/NoteList'
-import './App.css';
+import NoteEditor from '../components/NoteEditor'
+import NoteList from '../components/NoteList'
+import '../App.css';
 import React from 'react';
 
 class MainPage extends React.Component {

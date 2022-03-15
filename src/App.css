@@ -1,12 +1,13 @@
-.MainPage {
-  text-align: left;
+.App {
   background-color: #fcfcfc;
 }
 
 .App-header {
-  background-color: #eceeef;
-  font-size: 11pt;
+  width: 100%;
+  position: fixed;
   color: #707070;
+  font-size: 11pt;
+  background-color: #eceeef;
   padding: 15px;
 }
 
@@ -14,7 +15,7 @@
   margin-left:  auto;
   margin-right: auto;
   max-width: 960px;
-  padding: 0px 10px;
+  padding: 60px 10px;
 }
 
 .editor {
@@ -74,13 +75,16 @@
 }
 
 .noteWrapper {
-  padding: 10px;
-  width: 90%;
+  padding: 0px 15px;
+  width: 100%;
+}
+
+.dateWrapper {
+  margin-top: 10px;
 }
 
 .noteContent {
-  height: 50%;
-  padding: 5px 0px;
+  height: 60%;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -93,9 +97,9 @@
   text-align: right;
 }
 
-.noteDateLink {
+.dateLink {
   text-decoration: none;
-  padding: 5px 0px;
+  color: #707070;
 }
 
 .btnAdd {
@@ -107,18 +111,20 @@
   border-color: #eceeef;
   border-radius: 4px;
   padding: 8px 20px;
+  cursor: pointer;
 }
 
 .btnDel {
   margin: 10px;
   width: 100px;
-  height: 40px;
   color: #fff;
   background-color: #eb5858;
   border: solid 1px;
   border-color: #eceeef;
   border-radius: 4px;
   padding: 8px 0px;
+  cursor: pointer;
+  float: right;
 }
 
 .btnBack {
@@ -129,5 +135,10 @@
   border: solid 1px;
   border-color: #eceeef;
   border-radius: 4px;
-  padding: 8px 20px;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+
+.btnWrapper {
+  padding: 30px 20px 30px 0px;
 }

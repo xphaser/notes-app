@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 
 class NoteElement extends React.Component {
   render() {
     return (
       <div className="noteElement">
         <div className="noteWrapper">
-          <div className="noteContent">{this.props.content}</div>
-          <div className="noteDateLink">
+          <ReactMarkdown className="noteContent">{this.props.content}</ReactMarkdown>
+          <div className="dateWrapper">
             <Link 
+              className="dateLink"
               to={`/note/${this.props.date}`}
               state={{
                 content: this.props.content,
@@ -18,7 +20,9 @@ class NoteElement extends React.Component {
               </Link>
             </div>
           </div>
-        <button className="btnDel" onClick={this.props.onDelete}>Delete note</button>
+        <div className="btnWrapper">
+          <button className="btnDel" onClick={this.props.onDelete}>Delete note</button>
+        </div>
       </div>
     )
   }

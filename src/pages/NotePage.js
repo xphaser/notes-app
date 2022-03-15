@@ -1,5 +1,6 @@
-import './App.css';
+import '../App.css';
 import React from 'react';
+import ReactMarkdown from 'react-markdown'
 import { Link, useParams } from 'react-router-dom';
 
 const NotePage = (props) => {
@@ -7,17 +8,17 @@ const NotePage = (props) => {
     const note = props.notes.find(note => note.date == id);
 
     return (
-      <div className="NotePage">
+      <div className="App">
         <header className="App-header">Notes App</header>
         <div className="wrapper">
           <Link to ='/' replace={true}>
             <button className="btnBack">Go back</button>
           </Link>
-          <Link to='/' replace={true} >
-            <button className="btnDel" onClick={props.onDelete.bind(null, note)}>Delete</button>
+          <Link to='/' replace={true}>
+            <button className="btnDel" onClick={props.onDelete.bind(null, note)}>Delete note</button>
           </Link>
           <div className="note">
-            <span>{note.content}</span>
+            <ReactMarkdown>{note.content}</ReactMarkdown>
             <div className="noteDate">
               {(new Date(note.date)).toLocaleDateString()}
             </div>
