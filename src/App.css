@@ -1,4 +1,4 @@
-.App {
+.MainPage {
   text-align: left;
   background-color: #fcfcfc;
 }
@@ -10,6 +10,13 @@
   padding: 15px;
 }
 
+.wrapper {
+  margin-left:  auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding: 0px 10px;
+}
+
 .editor {
   display: flex;
   flex-direction: column;
@@ -18,7 +25,7 @@
 
 .editorHeader {
   padding: 10px;
-  width: 60vw;
+  width: 100%;
   font-size: 12pt;
   color: #707070;
   font-weight: bold;
@@ -26,24 +33,13 @@
 
 .editorTextarea {
   resize: none;
-  width: 60vw;
+  width: 100%;
   border: solid 1px;
   border-color: #eceeef;
   border-radius: 4px;
   color: #707070;
   font-size: 11pt;
   font-family: sans-serif;
-}
-
-.btnAdd {
-  margin: 10px;
-  width: 100px;
-  color: #707070;
-  background-color: #fff;
-  border: solid 1px;
-  border-color: #eceeef;
-  border-radius: 4px;
-  padding: 8px 20px;
 }
 
 .listHeader {
@@ -70,6 +66,13 @@
   background-color: #eaeaea;
 }
 
+.note {
+  padding: 20px;
+  background-color: #eaeaea;
+  font-size: 11pt;
+  color: #707070;
+}
+
 .noteWrapper {
   padding: 10px;
   width: 90%;
@@ -87,7 +90,23 @@
 }
 
 .noteDate {
+  text-align: right;
+}
+
+.noteDateLink {
+  text-decoration: none;
   padding: 5px 0px;
+}
+
+.btnAdd {
+  margin: 10px;
+  width: 100px;
+  color: #707070;
+  background-color: #fff;
+  border: solid 1px;
+  border-color: #eceeef;
+  border-radius: 4px;
+  padding: 8px 20px;
 }
 
 .btnDel {
@@ -100,4 +119,15 @@
   border-color: #eceeef;
   border-radius: 4px;
   padding: 8px 0px;
+}
+
+.btnBack {
+  margin: 10px;
+  width: 100px;
+  color: #707070;
+  background-color: #eceeef;
+  border: solid 1px;
+  border-color: #eceeef;
+  border-radius: 4px;
+  padding: 8px 20px;
 }

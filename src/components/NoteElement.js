@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class NoteElement extends React.Component {
   render() {
@@ -6,8 +7,17 @@ class NoteElement extends React.Component {
       <div className="noteElement">
         <div className="noteWrapper">
           <div className="noteContent">{this.props.content}</div>
-          <div className="noteDate">{(new Date(this.props.date)).toLocaleDateString()}</div>
-        </div>
+          <div className="noteDateLink">
+            <Link 
+              to={`/note/${this.props.date}`}
+              state={{
+                content: this.props.content,
+                date: this.props.date
+              }}>            
+                {(new Date(this.props.date)).toLocaleDateString()}
+              </Link>
+            </div>
+          </div>
         <button className="btnDel" onClick={this.props.onDelete}>Delete note</button>
       </div>
     )

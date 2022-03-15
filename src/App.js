@@ -1,7 +1,8 @@
-import NoteEditor from './components/NoteEditor'
-import NoteList from './components/NoteList'
-import './App.css';
 import React from 'react';
+import './index.css';
+import MainPage from './MainPage';
+import NotePage from './NotePage'
+import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const notes = [{
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -29,11 +30,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">Notes App</header>
-        <NoteEditor onAdd={this.handleAdd}/>
-        <NoteList notes={this.state.notes} onDelete={this.handleDel}/>
-      </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<MainPage notes={this.state.notes} onAdd={this.handleAdd} onDelete={this.handleDel}/>} />
+          <Route path="/note/:id" element={<NotePage notes={this.state.notes} onDelete={this.handleDel}/>} />
+        </Routes>
+      </Router>
     )
   }
 
