@@ -47,9 +47,7 @@ class App extends React.Component {
 
   handleDel(note) {
     const id = note.date;
-    const newNotes = this.state.notes.filter((note) => {
-      return note.date != id;
-    });
+    const newNotes = this.state.notes.filter((note) => note.date != id);
     this.setState({notes: newNotes})
   }
 }
